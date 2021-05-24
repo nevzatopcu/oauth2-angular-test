@@ -1,0 +1,13 @@
+<h2>Welcome to the autorized path!</h2>
+<div>
+  <h6>User:</h6>
+  {{ user$ | async | json }}
+</div>
+
+<div>
+  <h6>Access Token:</h6>
+  {{ token$ | async }}
+</div>
+
+<button (click)="logout()">Logout</button>
+<button (click)="testHttp()">Send HttpRequest to check interceptor</button>
