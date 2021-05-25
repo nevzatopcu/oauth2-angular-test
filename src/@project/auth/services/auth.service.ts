@@ -17,13 +17,13 @@ export class AuthService implements OnDestroy {
 
   constructor(private oauthService: OAuthService) {
     // Remove this
-    if (!environment.production)
-      this.oauthService.events
-        .pipe(
-          filter((e) => e.type === 'silently_refreshed'),
-          takeUntil(this.destroyer$),
-        )
-        .subscribe(() => alert('Silent Refresh worked :)'));
+    // if (!environment.production)
+    //   this.oauthService.events
+    //     .pipe(
+    //       filter((e) => e.type === 'silently_refreshed'),
+    //       takeUntil(this.destroyer$),
+    //     )
+    //     .subscribe(() => alert('Silent Refresh worked :)'));
   }
 
   init(): Promise<boolean> {
